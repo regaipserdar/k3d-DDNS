@@ -12,6 +12,8 @@ Before getting started, make sure you have the following prerequisites in place:
 
 - [K3d](https://k3d.io/) installed on your local machine
 - A [Cloudflare](https://www.cloudflare.com/) account
+- Docker or Rancher 
+- Helm Chard must be installed on your local machine
 - A registered domain or subdomain managed by Cloudflare
 - API token with the necessary permissions for Cloudflare DNS management
 
@@ -24,6 +26,10 @@ Before getting started, make sure you have the following prerequisites in place:
     ```bash
    k3d cluster create recon
     ```
+
+
+    *** result *** 
+![Cluster-Create](/static/images/cluster-create.png)
 
 ## Set up ExternalDNS
 
