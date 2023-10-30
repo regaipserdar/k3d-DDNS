@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pod Information for rooterbyte.com</title>
+    <style>
+        .container {
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #007f00; /* Yeşil renk Active için */
+            color: white;
+        }
+
+        .card-title {
+            font-size: 20px;
+        }
+
+        .card-text {
+            font-size: 16px;
+        }
+
+        .text-muted {
+            font-size: 12px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Duruma göre renkler */
+        .bg-success {
+            background-color: #4CAF50; /* Yeşil renk Active için */
+        }
+
+        .bg-danger {
+            background-color: #FF5733; /* Kırmızı renk Inactive için */
+        }
+
+        .bg-warning {
+            background-color: #FFA500; /* Turuncu renk Busy için */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <div>
+                <h2>Pod Information for rooterbyte.com</h2>
+                <p>This is the status page for the pod running at rooterbyte.com</p>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Pod Status
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Web Servers: <strong>Active</strong> <img src="https://toppng.com/uploads/preview/free-icons-png-green-button-icon-11562980484agrqdnwooe.png" height="20px" style="border-radius:50%;" title="Active"></p>
+                                
+                                <p class="card-text">Pod Hostname: <strong>{{.PodHostname}}</strong></p>
+                                
+                                <p class="card-text">Pod IP Address: <strong>{{.PodIPAddress}}</strong></p>
+                                
+                                <p class="card-text">Current Time: <strong>{{.PodCurrentTime}}</strong></p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Web Servers</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Active</h5>
+                                <p class="card-text">Web servers are active and usable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Clusters</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Active</h5>
+                                <p class="card-text">Clusters are active and usable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row text-center border-top">
+                    <div class="col-md-12">
+                        <p>2023 &copy; @rooterbyte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

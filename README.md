@@ -69,4 +69,26 @@ Metrics-server is running at https://0.0.0.0:53401/api/v1/namespaces/kube-system
 >
 > Furthermore, when determining the namespace in which ExternalDNS operates, ensure it aligns with the zone in your Cloudflare account for which DNS records need to be updated. This alignment is essential to ensure the accurate synchronization of DNS records.
 
+## Detailed information:
+  https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/cloudflare.md
 
+
+# Check result
+```
+NAME: external-dns
+LAST DEPLOYED: Mon Oct 30 21:15:03 2023
+NAMESPACE: dummypage
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+CHART NAME: external-dns
+CHART VERSION: 6.27.0
+APP VERSION: 0.13.6
+
+** Please be patient while the chart is being deployed **
+
+To verify that external-dns has started, run:
+
+  kubectl --namespace=dummypage get pods -l "app.kubernetes.io/name=external-dns,app.kubernetes.io/instance=external-dns"
+```
