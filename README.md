@@ -28,7 +28,7 @@ Before getting started, make sure you have the following prerequisites in place:
     ```
 
 
-    *** result *** 
+1.1  **Create a Kubernetes Cluster**
 ![Cluster-Create](/static/images/cluster-create.png)
 
 ## Set up ExternalDNS
