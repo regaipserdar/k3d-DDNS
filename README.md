@@ -6,6 +6,40 @@ This project aims to create a Kubernetes cluster with dynamic DNS (DDNS) using K
 
 Kubernetes is a powerful container orchestration platform, but it can be challenging to provide external access to services running within a cluster when you don't have a static IP address. This project demonstrates how to set up a Kubernetes cluster using K3d and configure dynamic DNS using Cloudflare to overcome this limitation.
 
+# Project Documentation
+
+- [Home](#home)
+- [K3d and Cloudflare DDNS](#k3d-and-cloudflare-ddns)
+- [Install ExternalDNS](#install-externaldns)
+- [NodePort Usage](#nodeport-usage)
+- [LoadBalancer Usage](#loadbalancer-usage)
+- [Ingress Usage](#ingress-usage)
+
+## Home
+
+This document serves as the homepage of your project. It contains general descriptions of your project.
+
+## K3d and Cloudflare DDNS
+
+This document explains how to open a Kubernetes cluster to the outside world using K3d and Cloudflare DDNS.
+
+## Install ExternalDNS
+
+This document provides instructions on how to install and configure ExternalDNS in your Kubernetes cluster.
+
+## NodePort Usage
+
+This document demonstrates how to create externally accessible services using NodePort.
+
+## LoadBalancer Usage
+
+This document explains how to create externally accessible services using LoadBalancer.
+
+## Ingress Usage
+
+This document details how to create externally accessible services with complex traffic routing and SSL/TLS encryption using Ingress.
+
+
 ## Prerequisites
 
 Before getting started, make sure you have the following prerequisites in place:
@@ -30,6 +64,13 @@ Before getting started, make sure you have the following prerequisites in place:
 
 1.1  **Create a Kubernetes Cluster**
 ![Cluster-Create](/static/images/cluster-create.png)
+
+```
+    $ kubectl cluster-info
+    Kubernetes control plane is running at https://0.0.0.0:53401
+    CoreDNS is running at https://0.0.0.0:53401/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+    Metrics-server is running at https://0.0.0.0:53401/api/v1/namespaces/kube-system/services/https:metrics-server:https/proxy
+```
 
 ## Set up ExternalDNS
 
